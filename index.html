@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    * a {
+      text-decoration: none;
+      color: #707883;
+    }
+
+    .root {
+      width: 415px;
+      height: 415px;
+      border-radius: 30px;
+      background: linear-gradient(180deg, #222933 0%, #171E28 100%);
+      padding: 40px 30px 30px 30px;
+    }
+
+    .hero {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .root h1 {
+      color: #FFF;
+      font-family: Inter;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-top: 53px;
+      margin-bottom: 14px;
+    }
+
+    .root p {
+      color: #7B818D;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 169.5%;
+    }
+
+    .root>a {
+      padding: 17px;
+      border-radius: 50%;
+      background-color: #262F38;
+    }
+
+    .root>a:hover {
+      background: #fff;
+      transition-duration: 0.4s;
+    }
+
+    .beta {
+      list-style: none;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 169.5%;
+      margin-top: 37.5px;
+      margin-bottom: 50px;
+    }
+
+    .beta a {
+      padding: 15px 20px;
+      border-radius: 50%;
+      background-color: #262F38;
+    }
+
+    .beta a:hover {
+      background: #FC7614;
+      color: white;
+      transition-duration: 0.4s;
+    }
+
+    .active a{
+      background: #7e8798;
+      color: white;
+    }
+
+    #submit {
+      padding: 11px 130px;
+      border-radius: 32px;
+      background: #FC7613;
+      color: #FFF;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 169.5%;
+      letter-spacing: 1.725px;
+    }
+
+    #submit:hover {
+      color: #FC7613;
+      background: #fff;
+      transition-duration: 0.4s;
+    }
+
+    .hoo {
+      display: flex;
+      gap: 19px;
+    }
+
+    .selected {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+    }
+
+    .root1 {
+      width: 415px;
+      height: 415px;
+      border-radius: 30px;
+      background: linear-gradient(180deg, #222933 0%, #171E28 100%);
+      padding: 40px 30px 30px 30px;
+      text-align: center;
+      align-items: center;
+    }
+
+    .firstp {
+      color: #FC7614;
+      text-align: center;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 169.5%;
+      padding: 4px 19px;
+      border-radius: 36px;
+      background: #262F38;
+      margin-top: 37px;
+      margin-bottom: 36px;
+    }
+
+    .root1 h1 {
+      color: #FFF;
+      font-family: Inter;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 14px;
+    }
+
+    .secondp {
+      color: #7B818D;
+      text-align: center;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 169.5%;
+    }
+
+    .selected{
+      display: none;
+    }
+
+    .attribution{
+      color: white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    
+    <div class="hero">
+      <div class="root">
+        <a href="#"><img src="./images/icon-star.svg" alt=""></a>
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!</p>
+        <ul class="hoo">
+          <li class="beta"><a href="#">1</a></li>
+          <li class="beta"><a href="#">2</a></li>
+          <li class="beta"><a href="#">3</a></li>
+          <li class="beta"><a href="#">4</a></li>
+          <li class="beta"><a href="#">5</a></li>
+        </ul>
+        <a href="#" id="submit">Submit</a>
+      </div>
+
+
+      <div class="selected">
+        <div class="root1">
+          <img src="./images/illustration-thank-you.svg" alt="">
+          <p class="firstp"></p>
+          <h1>Thank you!</h1>
+          <p class="secondp">We appreciate you taking the time to give a rating. If you ever need more support,
+            don't hesitate to get in touch!</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://t.me/ninzacoder" target="_blank">NinzaCoder-js</a>.
+    </div>
+  </header>
+
+  
+
+
+  <script>
+    let rounds = document.querySelectorAll('.beta');
+    let round  = document.querySelector('.beta');
+    let street = document.querySelector('.firstp');
+
+    rounds.forEach((el)=>{
+      el.addEventListener('click',(event)=>{
+        
+        rounds.forEach((el)=>{
+          el.classList.remove('active');
+        })
+         el.classList.toggle('active');
+         street.textContent = `You selectet ${el.textContent} out of 5`;
+      })
+    })
+
+    let submit = document.querySelector('#submit');
+    submit.addEventListener('click',()=>{
+      let selected = document.querySelector('.selected');
+      let root = document.querySelector('.root');
+      root.style.display='none';
+      selected.style.display='flex';
+      
+    })
+  </script>
+
+
+</body>
+
+</html>
